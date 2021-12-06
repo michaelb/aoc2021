@@ -20,14 +20,13 @@ fn part1() {
     for _ in 0..80 {
         bucket = next(&bucket);
     }
-    println!("final bucket: {:?}", bucket);
 
     println!("after 80 days fish count: {:?}", bucket.iter().sum::<usize>());
 
     for _ in 80..256 {
         bucket = next(&bucket);
     }
-    println!("after 80 days fish count: {:?}", bucket.iter().sum::<usize>());
+    println!("after 256 days fish count: {:?}", bucket.iter().sum::<usize>());
 
 
  }
