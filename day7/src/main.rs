@@ -22,5 +22,7 @@ fn part1() {
 
     let average = (v.iter().sum::<usize>() / v.len()) as i64;
     let fuel_conso:i64 = v.iter().map(|&x| i64::abs(x as i64 - average as i64)*(i64::abs(x as i64 - average)+1)/2).sum();
-    println!("fuel conso v2= {}", fuel_conso);
+    let average = (v.iter().sum::<usize>() / v.len()) as i64 +1 ;
+    let fuel_conso2:i64 = v.iter().map(|&x| i64::abs(x as i64 - average as i64)*(i64::abs(x as i64 - average)+1)/2).sum();
+    println!("fuel conso v2= {}", std::cmp::min(fuel_conso, fuel_conso2));
 } 
